@@ -4,13 +4,14 @@ import caio.luiz.Equipamento;
 
 import java.io.FileInputStream;
 import java.lang.reflect.Constructor;
+import java.util.Objects;
 import java.util.Properties;
 
 public class Questao1 {
     public static Equipamento criarEquipamento(String tipoDeEquipamento, String identificador, int quantidade){
 //        equipamentos de mesmo tipo podem ter identificadores diferentes
 //        quando o identificador solicitado for igual a um existente, deve-se apenas atualizar sua quantidade, em vez de criar uma nova instancia
-        String rootPath = Thread.currentThread().getContextClassLoader().getResource("").getPath();
+        String rootPath = Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResource("")).getPath();
         String appConfigPath = rootPath + "app.properties";
         Properties appProps = new Properties();
         try {
