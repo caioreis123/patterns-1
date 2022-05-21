@@ -1,5 +1,5 @@
 package caio.luiz;
 
-public class Acessorios {
+public class Acessorios extends Equipamento{
     public String descricao;
 }
