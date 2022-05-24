@@ -3,7 +3,6 @@ package caio.luiz;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.lang.reflect.Constructor;
-import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Objects;
 import java.util.Properties;
@@ -18,25 +17,25 @@ public abstract class Equipamento {
         this.quantidade = quantidade;
     }
 
-    public static Equipamento retornarEquipamentoDoCatalogo(String tipoDeEquipamento, String identificador, int quantidade){
+    public static Equipamento retornaEquipamentoDoCatalogo(String tipoDeEquipamento, String identificador, int quantidade){
         if(catalogo.containsKey(identificador)){
             Equipamento equipamento = catalogo.get(identificador);
             equipamento.atualizaQuantidade(quantidade);
             return equipamento;
         }
-        Equipamento equipamento = criarEquipamento(tipoDeEquipamento, identificador, quantidade);
+        Equipamento equipamento = criarEquipamentoNovo(tipoDeEquipamento, identificador, quantidade);
         catalogo.put(identificador, equipamento);
         return equipamento;
     };
 
     /**
-     * Utiliza reflexão para obter o equipamento concreto desejado
+     * Utiliza reflexão para criar um equipamento concreto novo
      * @param tipoDeEquipamento
      * @param identificador
      * @param quantidade
      * @return Equipamento
      */
-    private static Equipamento criarEquipamento(String tipoDeEquipamento, String identificador, int quantidade){
+    private static Equipamento criarEquipamentoNovo(String tipoDeEquipamento, String identificador, int quantidade){
         try {
             String nomeDaClasse = pegarNomeDaClasse(tipoDeEquipamento);
             Class<?> classeConcretaDeEquipamento = Class.forName("caio.luiz."+nomeDaClasse);
