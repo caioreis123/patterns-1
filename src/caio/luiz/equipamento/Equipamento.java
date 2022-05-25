@@ -18,7 +18,7 @@ public abstract class Equipamento {
     }
 
     /**
-     * Método utilizado pelo cliente e que inicia todo o processo de criação e catalogaçao de equipamentos
+     * Método utilizado pelo cliente e que inicia o processo de criação e catalogaçao de equipamentos
      * @param tipoDeEquipamento
      * @param identificador
      * @param quantidade
