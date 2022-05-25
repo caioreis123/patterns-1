@@ -13,10 +13,17 @@ public abstract class Equipamento {
     public int quantidade;
     public static HashMap<String, Equipamento> catalogo = new HashMap<String, Equipamento>();
 
-    public void atualizaQuantidade(int quantidade){
+    private void atualizaQuantidade(int quantidade){
         this.quantidade = quantidade;
     }
 
+    /**
+     * Método utilizado pelo cliente e que inicia todo o processo de criação e catalogaçao de equipamentos
+     * @param tipoDeEquipamento
+     * @param identificador
+     * @param quantidade
+     * @return Equipamento
+     */
     public static Equipamento retornaEquipamentoDoCatalogo(String tipoDeEquipamento, String identificador, int quantidade){
         if(catalogo.containsKey(identificador)){
             Equipamento equipamento = catalogo.get(identificador);

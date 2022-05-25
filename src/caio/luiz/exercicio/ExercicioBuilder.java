@@ -5,14 +5,15 @@ import caio.luiz.equipamento.Equipamento;
 import java.util.ArrayList;
 
 public class ExercicioBuilder implements BuilderInterface{
+
     String nome;
     ArrayList<TipoExercicio> tipoExercicios;
     ArrayList<String> gruposMusculares;
     ArrayList<Equipamento> equipamentos;
 
     @Override
-    public void reset() {
-        this.nome = "";
+    public void reset(String nome) {
+        this.nome = nome;
         this.tipoExercicios = new ArrayList<TipoExercicio>();
         this.gruposMusculares = new ArrayList<String>();
         this.equipamentos = new ArrayList<Equipamento>();
@@ -33,7 +34,7 @@ public class ExercicioBuilder implements BuilderInterface{
         this.equipamentos = equipamentos;
     }
 
-    public Exercicio pegaExercicio(String nome){
+    public Exercicio pegaExercicio(){
         return new Exercicio(nome, tipoExercicios, gruposMusculares, equipamentos);
     }
 }
