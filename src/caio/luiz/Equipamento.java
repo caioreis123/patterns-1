@@ -38,7 +38,7 @@ public abstract class Equipamento {
     private static Equipamento criarEquipamentoNovo(String tipoDeEquipamento, String identificador, int quantidade){
         try {
             String nomeDaClasse = pegarNomeDaClasse(tipoDeEquipamento);
-            Class<?> classeConcretaDeEquipamento = Class.forName("caio.luiz."+nomeDaClasse);
+            Class<?> classeConcretaDeEquipamento = Class.forName(nomeDaClasse);
             Constructor<?> constructor = classeConcretaDeEquipamento.getConstructor(String.class, int.class);
             Object equipamento = constructor.newInstance(identificador, quantidade);
             return (Equipamento) equipamento;

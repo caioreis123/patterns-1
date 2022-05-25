@@ -17,11 +17,6 @@ public class ExercicioBuilder implements BuilderInterface{
     }
 
     @Override
-    public void adicionarNome(String nome) {
-        this.nome = nome;
-    }
-
-    @Override
     public void adicionarTipoExercicios(ArrayList<TipoExercicio> tipoExercicios) {
         this.tipoExercicios = tipoExercicios;
     }
@@ -36,7 +31,7 @@ public class ExercicioBuilder implements BuilderInterface{
         this.equipamentos = equipamentos;
     }
 
-    public Exercicio pegaExercicio(){
+    public Exercicio pegaExercicio(String nome){
         return new Exercicio(nome, tipoExercicios, gruposMusculares, equipamentos);
     }
 }
