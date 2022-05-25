@@ -1,6 +1,10 @@
 package caio.luiz;
 
-import java.lang.reflect.Array;
+import caio.luiz.equipamento.Equipamento;
+import caio.luiz.exercicio.Exercicio;
+import caio.luiz.exercicio.ExercicioBuilder;
+import caio.luiz.exercicio.TipoExercicio;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -19,7 +23,6 @@ public class Main {
         ExercicioBuilder builder = new ExercicioBuilder();
         builder.reset();
         builder.adicionarEquipamentos(new ArrayList<>(Arrays.asList(equipamento1, equipamento2, equipamento3)));
-//        todo: fazer o nome obrigatorio
         builder.adicionarTipoExercicios(new ArrayList<TipoExercicio>(Arrays.asList(TipoExercicio.MOBILIDADE, TipoExercicio.CARDIOVASCULAR)));;
         builder.adicionarGruposMusculares(new ArrayList<String>(Arrays.asList("costas", "peito", "abdomen", "biceps")));
         Exercicio exercicio = builder.pegaExercicio("malha costas");

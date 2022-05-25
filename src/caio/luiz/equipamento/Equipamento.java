@@ -1,4 +1,4 @@
-package caio.luiz;
+package caio.luiz.equipamento;
 
 import java.io.FileInputStream;
 import java.io.IOException;

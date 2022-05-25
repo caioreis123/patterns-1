@@ -1,4 +1,4 @@
-package caio.luiz;
+package caio.luiz.equipamento;
 
 public class Halteres extends Equipamento {
     public double peso;

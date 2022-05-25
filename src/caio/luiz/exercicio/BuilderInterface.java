@@ -1,4 +1,6 @@
-package caio.luiz;
+package caio.luiz.exercicio;
+
+import caio.luiz.equipamento.Equipamento;
 
 import java.util.ArrayList;
 
