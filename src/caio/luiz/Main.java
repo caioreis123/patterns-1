@@ -23,8 +23,8 @@ public class Main {
         ExercicioBuilder builder = new ExercicioBuilder();
         builder.reset("malha costas");
         builder.adicionarEquipamentos(new ArrayList<>(Arrays.asList(equipamento1, equipamento2, equipamento3)));
-        builder.adicionarTipoExercicios(new ArrayList<TipoExercicio>(Arrays.asList(TipoExercicio.MOBILIDADE, TipoExercicio.CARDIOVASCULAR)));;
-        builder.adicionarGruposMusculares(new ArrayList<String>(Arrays.asList("costas", "peito", "abdomen", "biceps")));
+        builder.adicionarTipoExercicios(new ArrayList<>(Arrays.asList(TipoExercicio.MOBILIDADE, TipoExercicio.CARDIOVASCULAR)));;
+        builder.adicionarGruposMusculares(new ArrayList<>(Arrays.asList("costas", "peito", "abdomen", "biceps")));
         Exercicio exercicio = builder.pegaExercicio();
         System.out.println(exercicio);
     }
