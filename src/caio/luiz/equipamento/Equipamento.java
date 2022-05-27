@@ -9,9 +9,9 @@ import java.util.Properties;
 
 public abstract class Equipamento {
 
-    public String identificador;
-    public int quantidade;
-    public static HashMap<String, Equipamento> catalogo = new HashMap<String, Equipamento>();
+    protected String identificador;
+    protected int quantidade;
+    private static HashMap<String, Equipamento> catalogo = new HashMap<String, Equipamento>();
 
     private void atualizaQuantidade(int quantidade){
         this.quantidade = quantidade;

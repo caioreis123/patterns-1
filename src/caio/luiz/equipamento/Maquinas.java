@@ -2,8 +2,8 @@ package caio.luiz.equipamento;
 
 public class Maquinas extends Equipamento {
 
-    public String descricao;
-    public String marca;
+    private String descricao;
+    private String marca;
 
     private Maquinas(){}
 

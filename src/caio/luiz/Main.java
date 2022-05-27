@@ -34,6 +34,6 @@ public class Main {
         Equipamento equipamento2 = Equipamento.retornaEquipamentoDoCatalogo("maquinas", "identificadorX", 22);
         Equipamento equipamento3 = Equipamento.retornaEquipamentoDoCatalogo("halteres", "identificadorY", 20);
         Equipamento equipamento4 = Equipamento.retornaEquipamentoDoCatalogo("acessorios", "identificadorZ", 99);
-        System.out.println("quantidade no colecao: " + Equipamento.catalogo.size());
+        System.out.println("equipamento1: " + equipamento1);
     }
 }

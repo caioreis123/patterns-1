@@ -2,7 +2,7 @@ package caio.luiz.equipamento;
 
 public class Acessorios extends Equipamento {
 
-    public String descricao;
+    private String descricao;
 
     private Acessorios(){}
 
