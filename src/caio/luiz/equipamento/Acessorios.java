@@ -4,9 +4,9 @@ public class Acessorios extends Equipamento {
 
     public String descricao;
 
-    public Acessorios(){}
+    private Acessorios(){}
 
-    public Acessorios(String identificador, int quantidade){
+    private Acessorios(String identificador, int quantidade){
         this.identificador = identificador;
         this.quantidade = quantidade;
         this.descricao = "Acessório de corda fortão";

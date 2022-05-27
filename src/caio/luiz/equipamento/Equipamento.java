@@ -46,7 +46,8 @@ public abstract class Equipamento {
         try {
             String nomeDaClasse = pegarNomeDaClasse(tipoDeEquipamento);
             Class<?> classeConcretaDeEquipamento = Class.forName(nomeDaClasse);
-            Constructor<?> constructor = classeConcretaDeEquipamento.getConstructor(String.class, int.class);
+            Constructor<?> constructor = classeConcretaDeEquipamento.getDeclaredConstructor(String.class, int.class);
+            constructor.setAccessible(true);
             Object equipamento = constructor.newInstance(identificador, quantidade);
             return (Equipamento) equipamento;
         } catch (Exception e) {
