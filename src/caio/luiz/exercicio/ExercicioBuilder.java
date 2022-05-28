@@ -12,7 +12,7 @@ public class ExercicioBuilder implements BuilderInterface{
     ArrayList<Equipamento> equipamentos;
 
     @Override
-    public void reset(String nomeDoExercicio) {
+    public void novoExercicio(String nomeDoExercicio) {
         this.nome = nomeDoExercicio;
         this.tipoExercicios = new ArrayList<TipoExercicio>();
         this.gruposMusculares = new ArrayList<String>();
@@ -20,7 +20,7 @@ public class ExercicioBuilder implements BuilderInterface{
     }
 
     @Override
-    public void adicionarTipoExercicios(ArrayList<TipoExercicio> tipoExercicios) {
+    public void adicionarTiposDeExercicio(ArrayList<TipoExercicio> tipoExercicios) {
         this.tipoExercicios = tipoExercicios;
     }
 
