@@ -4,7 +4,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.util.HashMap;
-import java.util.Objects;
 import java.util.Properties;
 
 public abstract class Equipamento {
@@ -63,8 +62,8 @@ public abstract class Equipamento {
      * @throws IOException
      */
     private static String pegarNomeDaClasse(String tipoDeEquipamento) throws IOException {
-        String rootPath = Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResource("")).getPath();
-        String appConfigPath = rootPath + "app.properties";
+        String rootPath = System.getProperty("user.dir");
+        String appConfigPath = rootPath + "\\src\\app.properties";
         Properties appProps = new Properties();
         appProps.load(new FileInputStream(appConfigPath));
         String className = appProps.getProperty(tipoDeEquipamento);
