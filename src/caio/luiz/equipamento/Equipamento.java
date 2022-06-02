@@ -71,4 +71,8 @@ public abstract class Equipamento {
         String className = appProps.getProperty(tipoDeEquipamento);
         return className;
     }
+
+    public String toString(){
+        return this.getClass().getSimpleName() + ": " + identificador + " - " + quantidade + " unidades";
+    }
 }

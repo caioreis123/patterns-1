@@ -16,4 +16,7 @@ public class Exercicio {
         this.gruposMusculares = gruposMusculares;
         this.equipamentos = equipamentos;
     }
+    public String toString() {
+        return "Exercicio{" + "nome=" + nome + ", tipoExercicios=" + tipoExercicios + ", gruposMusculares=" + gruposMusculares + ", equipamentos=" + equipamentos + '}';
+    }
 }
