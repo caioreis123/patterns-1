@@ -63,8 +63,9 @@ public abstract class Equipamento {
      * @throws IOException
      */
     private static String pegarNomeDaClasse(String tipoDeEquipamento) throws IOException {
-        String rootPath = Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResource("")).getPath();
-        String appConfigPath = rootPath + "app.properties";
+        String rootPath = System.getProperty("user.dir");
+        String fileSeparator = System.getProperty("file.separator");
+        String appConfigPath = rootPath + fileSeparator + "src" + fileSeparator + "app.properties";
         Properties appProps = new Properties();
         appProps.load(new FileInputStream(appConfigPath));
         String className = appProps.getProperty(tipoDeEquipamento);
