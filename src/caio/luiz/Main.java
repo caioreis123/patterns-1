@@ -34,6 +34,7 @@ public class Main {
         Equipamento equipamento2 = Equipamento.retornaEquipamentoDoCatalogo("maquinas", "identificadorX", 22);
         Equipamento equipamento3 = Equipamento.retornaEquipamentoDoCatalogo("halteres", "identificadorY", 20);
         Equipamento equipamento4 = Equipamento.retornaEquipamentoDoCatalogo("acessorios", "identificadorZ", 99);
-        System.out.println("equipamento1: " + equipamento1);
+        System.out.println("Equipamentos de mesmo identificador sao iguais? " + equipamento1.equals(equipamento2));
+        System.out.println("Equipamentos de identificadores diferentes sao iguais? " + equipamento3.equals(equipamento4));
     }
 }
