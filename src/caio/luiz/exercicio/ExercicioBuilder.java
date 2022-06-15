@@ -11,8 +11,7 @@ public class ExercicioBuilder implements BuilderInterface{
     ArrayList<String> gruposMusculares;
     ArrayList<Equipamento> equipamentos;
 
-    @Override
-    public void novoExercicio(String nomeDoExercicio) {
+    public ExercicioBuilder(String nomeDoExercicio){
         this.nome = nomeDoExercicio;
         this.tipoExercicios = new ArrayList<TipoExercicio>();
         this.gruposMusculares = new ArrayList<String>();
