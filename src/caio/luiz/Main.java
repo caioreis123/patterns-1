@@ -32,12 +32,12 @@ public class Main {
         Equipamento equipamento2 = Equipamento.retornaEquipamentoDoCatalogo("halteres", "identificadorY", 20);
         Equipamento equipamento3 = Equipamento.retornaEquipamentoDoCatalogo("acessorios", "identificadorZ", 99);
 
-        ExercicioBuilder builder = new ExercicioBuilder("malha costas");
+        ExercicioBuilder builder = new ExercicioBuilder();
         builder.adicionarEquipamentos(new ArrayList<>(Arrays.asList(equipamento1, equipamento2, equipamento3)));
         builder.adicionarTiposDeExercicio(new ArrayList<>(Arrays.asList(TipoExercicio.MOBILIDADE, TipoExercicio.CARDIOVASCULAR)));;
         builder.adicionarGruposMusculares(new ArrayList<>(Arrays.asList("costas", "peito", "abdomen", "biceps")));
 
-        Exercicio exercicio = builder.pegaExercicio();
+        Exercicio exercicio = builder.pegaExercicio("malha costas");
 
         System.out.println(exercicio);
     }
