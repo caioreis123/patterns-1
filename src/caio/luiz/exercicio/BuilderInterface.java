@@ -8,4 +8,5 @@ public interface BuilderInterface {
     void adicionarTiposDeExercicio(ArrayList<TipoExercicio> tipoExercicios);
     void adicionarGruposMusculares(ArrayList<String> grupoMusculares);
     void adicionarEquipamentos(ArrayList<Equipamento> equipamentos);
+    Exercicio pegaExercicio(String nomeDoExercicio);
 }

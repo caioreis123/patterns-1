@@ -31,10 +31,9 @@ public class ExercicioBuilder implements BuilderInterface{
         this.equipamentos = equipamentos;
     }
 
-//    passar o nome aqui e
-//    subir pra interface o metodo
-//    remover listas
+//    remover listas como argumentos
+    @Override
     public Exercicio pegaExercicio(String nomeDoExercicio){
-        return new Exercicio(nomeDoExercicio, tipoExercicios, gruposMusculares, equipamentos);
+            return new Exercicio(nomeDoExercicio, tipoExercicios, gruposMusculares, equipamentos);
     }
 }
