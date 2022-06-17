@@ -5,9 +5,6 @@ import caio.luiz.exercicio.Exercicio;
 import caio.luiz.exercicio.ExercicioBuilder;
 import caio.luiz.exercicio.TipoExercicio;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -33,9 +30,17 @@ public class Main {
         Equipamento equipamento3 = Equipamento.retornaEquipamentoDoCatalogo("acessorios", "identificadorZ", 99);
 
         ExercicioBuilder builder = new ExercicioBuilder();
-        builder.adicionarEquipamentos(new ArrayList<>(Arrays.asList(equipamento1, equipamento2, equipamento3)));
-        builder.adicionarTiposDeExercicio(new ArrayList<>(Arrays.asList(TipoExercicio.MOBILIDADE, TipoExercicio.CARDIOVASCULAR)));;
-        builder.adicionarGruposMusculares(new ArrayList<>(Arrays.asList("costas", "peito", "abdomen", "biceps")));
+        builder.adicionarEquipamento(equipamento1);
+        builder.adicionarEquipamento(equipamento2);
+        builder.adicionarEquipamento(equipamento3);
+
+        builder.adicionarTipoDeExercicio(TipoExercicio.MOBILIDADE);;
+        builder.adicionarTipoDeExercicio(TipoExercicio.CARDIOVASCULAR);;
+
+        builder.adicionarGrupoMuscular("costas");
+        builder.adicionarGrupoMuscular("peito");
+        builder.adicionarGrupoMuscular("abdomem");
+        builder.adicionarGrupoMuscular("biceps");
 
         Exercicio exercicio = builder.pegaExercicio("malha costas");
 

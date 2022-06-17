@@ -17,21 +17,20 @@ public class ExercicioBuilder implements BuilderInterface{
     }
 
     @Override
-    public void adicionarTiposDeExercicio(ArrayList<TipoExercicio> tipoExercicios) {
-        this.tipoExercicios = tipoExercicios;
+    public void adicionarTipoDeExercicio(TipoExercicio tipoExercicio) {
+        this.tipoExercicios.add(tipoExercicio);
     }
 
     @Override
-    public void adicionarGruposMusculares(ArrayList<String> grupoMusculares) {
-        this.gruposMusculares = grupoMusculares;
+    public void adicionarGrupoMuscular(String grupoMuscular) {
+        this.gruposMusculares.add(grupoMuscular);
     }
 
     @Override
-    public void adicionarEquipamentos(ArrayList<Equipamento> equipamentos) {
-        this.equipamentos = equipamentos;
+    public void adicionarEquipamento(Equipamento equipamento) {
+        this.equipamentos.add(equipamento);
     }
 
-//    remover listas como argumentos
     @Override
     public Exercicio pegaExercicio(String nomeDoExercicio){
             return new Exercicio(nomeDoExercicio, tipoExercicios, gruposMusculares, equipamentos);
