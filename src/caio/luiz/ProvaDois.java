@@ -1,5 +1,6 @@
 package caio.luiz;
 
+import caio.luiz.observador.Interessado;
 import caio.luiz.programa.Programa;
 import caio.luiz.programa.TipoPrograma;
 import caio.luiz.serie.Serie;
@@ -24,7 +25,7 @@ public class ProvaDois {
 //          2. retorna o próximo exercício da série de cardio
 
         Programa programa = new Programa();
-        programa.setTipo(TipoPrograma.CARDIO);
+        programa.setTipo(TipoPrograma.FULL_WORKOUT);
         programa.init();
         while(programa.temProximo()){
             Serie serie = programa.proximo();
@@ -33,7 +34,18 @@ public class ProvaDois {
     }
 
     public static void questao2(){
-//        Observer
+        Interessado interessado1 = new Interessado();
+        Interessado interessado2 = new Interessado();
+
+        Programa programa = new Programa();
+        programa.setTipo(TipoPrograma.CARDIO);
+        programa.init();
+        programa.addInteressado(interessado1);
+        programa.addInteressado(interessado2);
+        while(programa.temProximo()){
+            Serie serie = programa.proximo();
+            serie.executar();
+        }
     }
 
     public static void questao3(){

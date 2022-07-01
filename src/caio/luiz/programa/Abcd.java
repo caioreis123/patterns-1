@@ -11,6 +11,7 @@ public class Abcd extends Status {
         this.diasDeRepouso.add(DayOfWeek.FRIDAY);
         this.diasDeRepouso.add(DayOfWeek.SATURDAY);
         this.diasDeRepouso.add(DayOfWeek.SUNDAY);
+
         adicionaSeriesDeAcordoComDia();
     }
 

@@ -1,5 +1,6 @@
 package caio.luiz.programa;
 
+import caio.luiz.observador.Interessado;
 import caio.luiz.serie.Serie;
 
 import java.time.DayOfWeek;
@@ -11,12 +12,15 @@ public class Programa {
     public static Status status;
     private DayOfWeek hoje;
 
+    public TipoPrograma tipoPrograma;
+
     public Programa(){
         hoje = LocalDateTime.now().getDayOfWeek();
 //        hoje = DayOfWeek.THURSDAY;
     }
 
     public void setTipo(TipoPrograma tipoPrograma) {
+        this.tipoPrograma = tipoPrograma;
         switch (tipoPrograma) {
             case FULL_WORKOUT -> status = new FullWorkout(this);
             case ABCD -> status = new Abcd(this);
@@ -38,5 +42,9 @@ public class Programa {
 
     public DayOfWeek getHoje() {
         return hoje;
+    }
+
+    public void addInteressado(Interessado interessado) {
+        status.addInteressado(interessado);
     }
 }
