@@ -7,12 +7,12 @@ import java.util.ArrayList;
 public class ExercicioBuilder implements BuilderInterface{
     String nome;
     ArrayList<TipoExercicio> tipoExercicios;
-    ArrayList<String> gruposMusculares;
+    ArrayList<GruposMusculares> gruposMusculares;
     ArrayList<Equipamento> equipamentos;
 
     public ExercicioBuilder(){
         this.tipoExercicios = new ArrayList<TipoExercicio>();
-        this.gruposMusculares = new ArrayList<String>();
+        this.gruposMusculares = new ArrayList<GruposMusculares>();
         this.equipamentos = new ArrayList<Equipamento>();
     }
 
@@ -22,7 +22,7 @@ public class ExercicioBuilder implements BuilderInterface{
     }
 
     @Override
-    public void adicionarGrupoMuscular(String grupoMuscular) {
+    public void adicionarGrupoMuscular(GruposMusculares grupoMuscular) {
         this.gruposMusculares.add(grupoMuscular);
     }
 
