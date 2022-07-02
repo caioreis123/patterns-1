@@ -15,8 +15,9 @@ public class Programa {
     public TipoPrograma tipoPrograma;
 
     public Programa(){
-        hoje = LocalDateTime.now().getDayOfWeek();
+//        hoje = LocalDateTime.now().getDayOfWeek();
 //        hoje = DayOfWeek.THURSDAY;
+        hoje = DayOfWeek.MONDAY;
     }
 
     public void setTipo(TipoPrograma tipoPrograma) {

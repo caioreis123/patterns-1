@@ -10,7 +10,7 @@ public class Main {
 //        ProvaUm.questao1();
 //        ProvaUm.questao2();
 //        ProvaDois.questao1();
-        ProvaDois.questao2();
+        ProvaDois.questao4();
 
     }
 

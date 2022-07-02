@@ -46,9 +46,11 @@ public abstract class Status {
 
     protected void criaSeries(GruposMusculares grupoMuscular, TipoExercicio tipoExercicio) {
         Serie serie1 = new Serie(3, 15, getExercicio(grupoMuscular, tipoExercicio));
-        Serie serie2 = new Serie(2, 30, getExercicio(grupoMuscular, tipoExercicio));
+        Serie serie2 = new Serie(3, 15, getExercicio(grupoMuscular, tipoExercicio));
+        Serie serie3 = new Serie(3, 16, getExercicio(grupoMuscular, tipoExercicio));
         this.series.push(serie1);
         this.series.push(serie2);
+        this.series.push(serie3);
     }
 
     public void addInteressado(Interessado interessado) {

@@ -75,4 +75,8 @@ public abstract class Equipamento {
     public String toString(){
         return this.getClass().getSimpleName() + ": " + identificador + " - " + quantidade + " unidades";
     }
+
+    public String getIdentificador() {
+        return identificador;
+    }
 }
