@@ -30,15 +30,17 @@ public class ProvaUm {
         Equipamento equipamento3 = Equipamento.retornaEquipamentoDoCatalogo("acessorios", "identificadorZ", 99);
 
         ExercicioBuilder builder = new ExercicioBuilder();
-        builder.adicionarEquipamento(equipamento1);
-        builder.adicionarEquipamento(equipamento2);
-        builder.adicionarEquipamento(equipamento3);
+        Exercicio exercicio = builder
+                .adicionarEquipamento(equipamento1)
+                .adicionarEquipamento(equipamento2)
+                .adicionarEquipamento(equipamento3)
 
-        builder.adicionarTipoDeExercicio(tipoExercicio);
+                .adicionarTipoDeExercicio(tipoExercicio)
 
-        builder.adicionarGrupoMuscular(grupoMuscular);
+                .adicionarGrupoMuscular(grupoMuscular)
 
-        Exercicio exercicio = builder.pegaExercicio(grupoMuscular.toString());
+                .pegaExercicio(grupoMuscular.toString());
+
         return exercicio;
     }
 }

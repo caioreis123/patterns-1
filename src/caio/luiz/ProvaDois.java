@@ -1,5 +1,10 @@
 package caio.luiz;
 
+import caio.luiz.equipamento.Equipamento;
+import caio.luiz.exercicio.Exercicio;
+import caio.luiz.exercicio.ExercicioBuilder;
+import caio.luiz.exercicio.GruposMusculares;
+import caio.luiz.exercicio.TipoExercicio;
 import caio.luiz.exercicioCombinado.ExercicioCombinado;
 import caio.luiz.observador.Interessado;
 import caio.luiz.programa.Programa;
@@ -26,7 +31,7 @@ public class ProvaDois {
 //          2. retorna o próximo exercício da série de cardio
 
         Programa programa = new Programa();
-        programa.setTipo(TipoPrograma.FULL_WORKOUT);
+        programa.setTipo(TipoPrograma.ABCD);
         programa.init();
         while(programa.temProximo()){
             Serie serie = programa.proximo();
@@ -54,8 +59,43 @@ public class ProvaDois {
     }
 
     public static void questao3(){
-//        decorator
-        ExercicioCombinado exercicioCombinado = new ExercicioCombinado();
+        Equipamento equipamento1 = Equipamento.retornaEquipamentoDoCatalogo("maquinas", "identificadorX", 13);
+        Equipamento equipamento2 = Equipamento.retornaEquipamentoDoCatalogo("halteres", "identificadorY", 20);
+        Equipamento equipamento3 = Equipamento.retornaEquipamentoDoCatalogo("acessorios", "identificadorZ", 99);
+
+
+        ExercicioBuilder builder = new ExercicioBuilder();
+
+        Exercicio exercicio1 = builder
+                .adicionarEquipamento(equipamento1)
+                .adicionarTipoDeExercicio(TipoExercicio.FUNCIONAL)
+                .adicionarGrupoMuscular(GruposMusculares.OMBROS_ABODOMINAL)
+                .pegaExercicio("exercicio1");
+
+        Exercicio exercicioCombina1 = builder.reset()
+                .combinarExercicio(exercicio1)
+
+                .adicionarEquipamento(equipamento2)
+                .adicionarTipoDeExercicio(TipoExercicio.MOBILIDADE)
+                .adicionarGrupoMuscular(GruposMusculares.MEMBROS_INFERIORES)
+                .pegaExercicio("exercicio2");
+
+        Exercicio exercicioCombina2 = builder.reset()
+                .combinarExercicio(exercicio1)
+                .combinarExercicio(exercicioCombina1)
+
+                .pegaExercicio("exercicio3");
+
+        Exercicio exercicioCombina = builder.reset()
+                .combinarExercicio(exercicioCombina2)
+                .adicionarEquipamento(equipamento3)
+
+                .pegaExercicio("exercicio4");
+
+        System.out.println(exercicio1);
+        System.out.println(exercicioCombina1);
+        System.out.println(exercicioCombina2);
+        System.out.println(exercicioCombina);
     }
 
     public static void questao4(){

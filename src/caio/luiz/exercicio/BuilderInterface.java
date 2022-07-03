@@ -3,8 +3,13 @@ package caio.luiz.exercicio;
 import caio.luiz.equipamento.Equipamento;
 
 public interface BuilderInterface {
-    void adicionarTipoDeExercicio(TipoExercicio tipoExercicio);
-    void adicionarGrupoMuscular(GruposMusculares grupoMuscular);
-    void adicionarEquipamento(Equipamento equipamento);
+    BuilderInterface adicionarTipoDeExercicio(TipoExercicio tipoExercicio);
+    BuilderInterface adicionarGrupoMuscular(GruposMusculares grupoMuscular);
+    BuilderInterface adicionarEquipamento(Equipamento equipamento);
+
+    ExercicioBuilder combinarExercicio(Exercicio exercicio);
+
+    ExercicioBuilder reset();
+
     Exercicio pegaExercicio(String nomeDoExercicio);
 }

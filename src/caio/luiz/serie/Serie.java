@@ -20,6 +20,11 @@ public class Serie {
         this.video = getVideo(descricaoDoExercicio);
     }
 
+    /**
+     * Flyweight logic
+     * @param descricaoDoExercicio
+     * @return
+     */
     private String getVideo(String descricaoDoExercicio) {
         if(!videoPorSerie.containsKey(descricaoDoExercicio)) {
             String videoDoExercicio = "[VIDEO DO EXERCICIO]" + descricaoDoExercicio;

@@ -1,19 +1,18 @@
 package caio.luiz.exercicio;
 
 import caio.luiz.equipamento.Equipamento;
-import caio.luiz.serie.Serie;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Set;
 
 public class Exercicio {
     String nome;
-    ArrayList<TipoExercicio> tipoExercicios;
-    ArrayList<GruposMusculares> gruposMusculares;
-    ArrayList<Equipamento> equipamentos;
+    Set<TipoExercicio> tipoExercicios;
+    Set<GruposMusculares> gruposMusculares;
+    Set<Equipamento> equipamentos;
 
-    protected Exercicio(String nome, ArrayList<TipoExercicio> tipoExercicios, ArrayList<GruposMusculares> gruposMusculares, ArrayList<Equipamento> equipamentos) {
+    protected Exercicio(String nome, Set<TipoExercicio> tipoExercicios, Set<GruposMusculares> gruposMusculares, Set<Equipamento> equipamentos) {
         this.nome = nome;
         this.tipoExercicios = tipoExercicios;
         this.gruposMusculares = gruposMusculares;
